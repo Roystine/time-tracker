@@ -33,7 +33,7 @@ pipeline {
         stage ('mvn Build Stage') {
             steps {
                 echo "Running the Build"
-                sh 'mvn clean package'
+                sh 'mvn clean package -Dmaven.test.skip=true'
             }
         }
         // Clean Workspace
@@ -41,7 +41,7 @@ pipeline {
     }    
     post {
         always {
-            cleanWs()
+           // cleanWs()
         }
     }
 
