@@ -42,6 +42,7 @@ pipeline {
     post {
         always {
            // cleanWs()
+            echo "commented clean step"
         }
     }
 
