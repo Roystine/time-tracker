@@ -5,6 +5,7 @@ pipeline {
 
     parameters{
         choice(name: 'BRANCH', choices: ['master', 'jenkins'], description: 'Pick Branch to Build')
+        booleanParam(name: 'True_False', defaultValue: true, description: 'Toggle this value')
     }
 
     stages{
